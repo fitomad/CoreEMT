@@ -132,7 +132,7 @@ extension EMTClient
         - Parameter stopID: Identificador de la parada
         - Returns: Datos de llegada de los diferentes autobuses.
     */
-    public func arrivals(forBusStop stopID: Int) -> AnyPublisher<[Arrival], Error>?
+    public func arrivals(forBusStop stopID: Int, includeStopInformation stopInformation: Bool = false) -> AnyPublisher<[Arrival], Error>?
     {
         let stationsURI = "\(self.baseUri)/transport/busemtmad/stops/\(stopID)/arrives/"
 
@@ -144,7 +144,7 @@ extension EMTClient
         let requestParameter = ArrivalParameter(culture: .spanish, 
             includeEstimations: true, 
             incidents: false, 
-            busStopDetails: false)
+            busStopDetails: includeStopInformation)
 
         let requestBody = try? self.jsonEncoder.encode(requestParameter)
 
