@@ -144,7 +144,7 @@ extension EMTClient
         let requestParameter = ArrivalParameter(culture: .spanish, 
             includeEstimations: true, 
             incidents: false, 
-            busStopDetails: includeStopInformation)
+            busStopDetails: stopInformation)
 
         let requestBody = try? self.jsonEncoder.encode(requestParameter)
 
