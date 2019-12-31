@@ -50,7 +50,7 @@ public class EMTClient
     public static let shared = EMTClient()
 
     /// Base para las peticiones al API de EMT Mobility Labs
-    internal let baseUri = "https://openapi.emtmadrid.es/v1"
+    internal let baseUri = "https://openapi.emtmadrid.es/v2"
 
     /// Configuración para la conexión al API
     internal let settings: Settings
