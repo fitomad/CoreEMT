@@ -11,7 +11,7 @@ import Foundation
 public struct BusStopAround: Codable
 {
     /// Identificador de la parada
-    public private(set) var stopID: String
+    public private(set) var stopID: Int
     /// Coordenada GPS
     public private(set) var geometry: Geometry
     /// Nombde
