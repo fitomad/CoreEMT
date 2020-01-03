@@ -14,13 +14,13 @@ public struct ArrivalResponse: Codable
     /// la petición de llegas para una parada.
     public private(set) var arrivals: [Arrival]
     /// Detalles de las paradas, si hubiera más de una
-    public private(set) var stops: [ArrivalStop]?
+    public private(set) var stops: [ArrivalStop]
 
     /// El API devuelve un array de paradas,
     /// pero sólo queremos detalles de la primera
-    public var stopDetails: ArrivalStop?
+    public var stopDetails: ArrivalStop
     {
-        return self.stops?.first
+        return self.stops[0]
     }
 
     /**
