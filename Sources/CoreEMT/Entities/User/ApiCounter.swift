@@ -16,10 +16,6 @@ internal struct ApiCounter: Codable
     internal private(set) var dailyUse: Int
     /// De momento tiene valor 0
     internal private(set) var owner: Int
-    /// Contrato de licencia
-    internal private(set) var license: String
-    /// Acerca del API
-    internal private(set) var about: String
 
     /**
 
@@ -29,7 +25,5 @@ internal struct ApiCounter: Codable
         case current
         case dailyUse
         case owner
-        case license = "licenceUse"
-        case about = "aboutUses"
     }
 }
